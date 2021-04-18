@@ -1,105 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notas</title>
-    <link rel="stylesheet" href="/css/estilos.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <div class="container-fluid">
-        <div class="row content">
-
-            <div class="col-2 ">
-                <div class="sidebar">
-                    <img class="logo" src="https://s3.ca-central-1.amazonaws.com/hover-assets/images/logos/studio-domain-logo.png"/>
-                    <ul class="main-menu">
-                        <div>
-                            <li>      
-                                
-                                <button type="button" class="btn btn-light boton">
-                                        <div class="logos-sidebar">
-                                            <ion-icon  class="icono-barra" name="home-outline"></ion-icon> 
-                                        </div>
-                                        Home
-                                </button>
-                                
-                            </li>
-                            <li>
-                                <button type="button" class="btn btn-light boton">
-                                        <div class="logos-sidebar">
-                                            <ion-icon class='icono-barra' name="stats-chart-outline"></ion-icon>
-                                        </div>
-                                        Stats  
-                                </button> 
-                            </li>
-                        </div>
-                        <div>
-                                <li>
-                                    <button type="button" class="btn btn-light boton">
-                                            <div class="logos-sidebar">
-                                                <ion-icon class='icono-barra' name="settings-outline"></ion-icon>
-                                            </div>
-                                            Settings
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="btn btn-light boton">
-                                        <div class="logos-sidebar">
-                                            <ion-icon class='icono-barra' name="log-out-outline"></ion-icon>
-                                        </div>
-                                            Logout
-                                    </button>
-                                </li>
-                            
-                        </div>
-                    </ul>
-                </div>
-            
-            </div>
-    
-            <div class="col-10 ">
-                <section class="contenido">
-                    <div class="cabecero">
-                            <div class="d-inline">
-                                <div class="lupa">
-                                    <ion-icon name="search-outline"></ion-icon>
-                                </div>
-                                <div class="search">
-                                    <input type="search" class="form-control" placeholder="Search..."/>
-                                </div>
-                            </div>
-                            <div class="d-inline">
-                                <a href="#" class="pregunta icono">
-                                    <ion-icon name="help-circle-outline"></ion-icon>
-                                </a>
-                                <a href="#" class="notifcacion icono">
-                                    <ion-icon name="notifications-outline"></ion-icon>
-                                </a>  
-                                <a href="#" class="user icono">
-                                    <ion-icon name="person-circle-outline"></ion-icon>
-                                </a>        
-                            </div>
+      <div class="row content">
+        <div class="col-2">
+          <div class="sidebar">
+            <img
+              class="logo"
+              src="https://s3.ca-central-1.amazonaws.com/hover-assets/images/logos/studio-domain-logo.png"
+            />
+            <ul class="main-menu">
+              <div>
+                <li>
+                  <button type="button" class="btn btn-light boton">
+                    <div class="logos-sidebar">
+                      <ion-icon
+                        class="icono-barra"
+                        name="home-outline"
+                      ></ion-icon>
                     </div>
-                </section>
-            </div>
-    
+                    Home
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn btn-light boton">
+                    <div class="logos-sidebar">
+                      <ion-icon
+                        class="icono-barra"
+                        name="stats-chart-outline"
+                      ></ion-icon>
+                    </div>
+                    Stats
+                  </button>
+                </li>
+              </div>
+              <div>
+                <li>
+                  <button type="button" class="btn btn-light boton">
+                    <div class="logos-sidebar">
+                      <ion-icon
+                        class="icono-barra"
+                        name="settings-outline"
+                      ></ion-icon>
+                    </div>
+                    Settings
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn btn-light boton">
+                    <div class="logos-sidebar">
+                      <ion-icon
+                        class="icono-barra"
+                        name="log-out-outline"
+                      ></ion-icon>
+                    </div>
+                    Logout
+                  </button>
+                </li>
+              </div>
+            </ul>
+          </div>
         </div>
-    </div>
-    
 
-
-    
-
-
-
- 
-    <div class="titulo">
-            
+        <div class="col-10">
+          <section class="contenido">
+            <div class="cabecero">
+              <div class="d-inline">
+                <div>
+                  <!-- <input type="search" class="form-control" placeholder="Search..."/> -->
+                  <div class="input-group">
+                    <span class="input-group-append">
+                      <button
+                        class="btn bg-white rounded-pill ms-n3 pl-0"
+                        type="button"
+                      >
+                        <ion-icon name="search-outline"></ion-icon>
+                      </button>
+                    </span>
+                    <input
+                      class="form-control border-0 rounded-pill"
+                      type="text"
+                      placeholder="Search"
+                      id="example-search-input"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="d-inline">
+                <a href="#" class="pregunta icono">
+                  <ion-icon name="help-circle-outline"></ion-icon>
+                </a>
+                <a href="#" class="notifcacion icono">
+                  <ion-icon name="notifications-outline"></ion-icon>
+                </a>
+                <a href="#" class="user icono">
+                  <ion-icon name="person-circle-outline"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div class="contenedor-titulo">
+                <div class="d-inline-block">
+                    <h4>Mis proyectos</h4>
+                </div>    
+                <div class="d-inline-block">
+                    <p>Todo</p>
+                </div> 
+            </div>
+            <div class="contenedor-tareas">
+                <div class="row">
+                    <div class="col-4">
+                        hola
+                    </div>
+                    <div class="col-4">
+                        hola
+                    </div>
+                    <div class="col-4">
+                        hola
+                    </div>
+                </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-</body>
+  </body>
 </html>
