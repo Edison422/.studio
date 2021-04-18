@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0em;
+    height:100vh;
+    box-shadow: 1px 1px 1px rgba(211, 211, 211,.4);
+    /* margin-right: 0 !important;
+    border-right: 0 !important;
+    padding-right: 0 !important; */
+}
+
+.logo{
+    width: 5em;
+
+}
+.boton{
+    margin: 15px 0px !important;
+    width: 100%;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    color:rgb(96 96 96) !important; 
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    border: 0 !important;
+    background-color: #ffffff !important;  
+    padding-left: 0 !important;
+}
+
+.logos-sidebar{
+    margin-top: 1.2vh;
+    margin-right: 13%;
+}
+
+.boton:hover{
+    border:none !important;
+    border-right: 4px solid #359d8a !important;
+    color:black !important;
+    font-weight: bold !important;
+    background-color:#ffffff !important;    
+}
+.contenido{
+
+}
+.cabecero{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.cabecero-derecho{
+    width: 30%;
+    height: 40%;
+    margin:10px 0px 0px 10px;
+    padding:0;
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    position: block;
+    box-sizing: border-box;
+    margin-left: 50%;
+}
+.titulo{
+    display: flex;
+    border: 2px solid black;    
+    width: 50%;
+    height: 40vh;
+}
+.search{
+    width: 50em;
+    flex-direction: column;
+    margin-left: 1px;
+    /* border: 3px solid black; */
+}
+.search:hover{
+    border-bottom: 1 px solid black !important;
+}
+.lupa{
+    margin-left: 30%;
+    font-size: 1.6rem;
+}
+.form-control{
+    border:none !important;
+    padding: 4px !important;
+}
+.form-control:focus{
+    -webkit-box-shadow: 10px 0 5px -2px #888 !important; 
+    box-shadow: 10px 0 5px -2px #888 !important;
+}
+
+.icono{
+  font-size: 1.5rem;
+}
+.icono-barra{
+  font-size: 1.2rem;
+}
+
+a, icono:link, icono:visited, icono:active {
+    color:black !important;
+}
+
+
+li{
+    list-style: none;
+}
+
+
+.content{
+    height:100vh;
+}
+
+
+.main-menu{
+    height: 100vh;
+    margin:0;   
+    padding:0;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+}
