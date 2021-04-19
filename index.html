@@ -91,7 +91,7 @@
                       </button>
                     </span>
                     <input
-                      class="form-control border-0 rounded-pill"
+                      class="form-control border-0 rounded-pill search"
                       type="text"
                       placeholder="Search"
                       id="example-search-input"
@@ -112,54 +112,89 @@
               </div>
             </div>
             <div class="contenedor-titulo">
-                <div class="d-inline-block">
-                    <h4>Mis proyectos</h4>
-                </div>    
-                <div class="d-inline-block">
-                    <p>Todo</p>
-                </div> 
+              <div class="d-inline-block">
+                <h4>Mis proyectos</h4>
+              </div>
+              <div class="d-inline-block">
+                <p>Todo</p>
+              </div>
             </div>
             <div class="contenedor-tareas">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="contenedor-notas">
-                          <div class="estado">
-                            <p class='mb-0'>Estado</p>
-                            <span>2</span>
-                          </div>
-                          <div class='agregar'>
-                            <button type="button" class="btn btn-success boton-agregar">+</button>
-                          </div>
-                        </div>
+              <div class="row">
+                <div class="col-4">
+                  <div class="contenedor-notas">
+                    <div class="estado">
+                      <p class="mb-0">Estado</p>
+                      <span>2</span>
                     </div>
-                    <div class="col-4">
-                        <div class="contenedor-notas">
-                          <div class="estado">
-                            <p class='mb-0'>Estado</p>
-                            <span>2</span>
-                          </div>
-                          <div class='agregar'>
-                            <button type="button" class="btn btn-success boton-agregar">+</button>
-                          </div>
-                        </div>
+                    <div class="agregar">
+                      <button
+                        type="button"
+                        class="btn btn-success boton-agregar"
+                      >
+                        +
+                      </button>
                     </div>
-                    <div class="col-4">
-                        <div class="contenedor-notas">
-                          <div class="estado">
-                            <p class='mb-0'>Estado</p>
-                            <span>2</span>
-                          </div>
-                          <div class='agregar'>
-                            <button type="button" class="btn btn-success boton-agregar">+</button>
-                          </div>
-                        </div>
+                    <div class="cuadro-notas">
+                      <div class="nota"></div>
+                      <div class="nota"></div>
+                      <div class="nota"></div>
+                      <div class="nota"></div>
                     </div>
+                  </div>
                 </div>
+                <div class="col-4">
+                  <div class="contenedor-notas">
+                    <div class="estado">
+                      <p class="mb-0">Estado</p>
+                      <span>2</span>
+                    </div>
+                    <div class="agregar">
+                      <button
+                        type="button"
+                        class="btn btn-success boton-agregar"
+                      >
+                        +
+                      </button>
+                    </div>
+                    <div class="cuadro-notas">
+                      <div class="nota"></div>
+                      <div class="nota"></div>
+                      <div class="nota"></div>
+                      <div class="nota"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="contenedor-notas">
+                    <div class="estado">
+                      <p class="mb-0">Estado</p>
+                      <span>2</span>
+                    </div>
+                    <div class="agregar">
+                      <button
+                        type="button"
+                        class="btn btn-success boton-agregar"
+                      >
+                        +
+                      </button>
+                    </div>
+                    <div class="cuadro-notas" id="notasDrag">
+                      <div style="background-color: black" class="nota"></div>
+                      <div class="nota"></div>
+                      <div class="nota"></div>
+                      <div class="nota"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="/main.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   </body>
 </html>
