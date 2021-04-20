@@ -254,4 +254,13 @@ li{
 }
 
 
+.elemento_eliminar--btn{
+    border-color: black !important;
+    border: none;
+    background-color: white;
+    color: #c71e1e;
+}
+.elemento_eliminar--btn:focus{
+    outline:none;
+}
 

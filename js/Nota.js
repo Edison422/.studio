@@ -26,6 +26,9 @@ class Nota{
     set estado(estado){
         this._estado=estado;
     }
+    get estado(){
+        return this._estado;
+    }
 }
 
 

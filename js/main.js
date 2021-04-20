@@ -92,7 +92,9 @@ const crearNotaHTML = (nota) => {
     <div id="nota-${nota.id}" class="nota">
     <div class='titulo-nota'>
     <h6>${nota.titulo}</h6>
-    <ion-icon name="attach-outline"></ion-icon>
+    <button class="elemento_eliminar--btn">
+      <ion-icon name="close-circle-outline" onclick="eliminarNota('${nota.id}','${nota.estado}')" role="img" class="md hydrated" aria-label="close circle outline"></ion-icon>
+    </button>
     </div>
     <div class='contenido-nota'>
         <p>${nota.contenido}</p>
@@ -196,11 +198,32 @@ if(!notasComplete){
   notasComplete=lisL;
 }
 
+
+
 cargarNotas("1");
 cargarNotas("2");
 cargarNotas("3");
 
-
+const eliminarNota=(id,estado)=>{
+  let inidiceEliminar;
+  switch(estado){
+    case '1':
+      inidiceEliminar=notasToDo.findIndex(el=>el.id == id);
+      notasToDo.splice(inidiceEliminar,1);
+    break;
+    case '2':
+      inidiceEliminar=notasInProgress.findIndex(el=>el.id == id);
+      notasInProgress.splice(inidiceEliminar,1);
+      break;
+      case '3':
+        inidiceEliminar=notasComplete.findIndex(el=>el.id == id);
+        notasComplete.splice(inidiceEliminar,1);
+        break;
+  }
+  console.log(estado);
+  guardar_localStorage();
+  cargarNotas(estado);
+}
 
 
 ////////////////////////////////////////////////////////////////
