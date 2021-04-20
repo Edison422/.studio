@@ -1,10 +1,17 @@
 let estadoSeleccionado;
 
-const notasToDo = [];
+let notasToDo = [];
 
-const notasInProgress = [];
+let notasInProgress = [];
 
-const notasComplete = [];
+let notasComplete = [];
+
+
+function guardar_localStorage(){
+  localStorage.setItem("notasToDo", JSON.stringify(notasToDo));
+  localStorage.setItem("notasInProgress", JSON.stringify(notasInProgress));
+  localStorage.setItem("notasComplete",JSON.stringify(notasComplete)); 
+}
 
 // Grupos de las notas
 let lista1 = document.getElementById("1");
@@ -12,7 +19,7 @@ let lista2 = document.getElementById("2");
 let lista3 = document.getElementById("3");
 
 function onMove (evt){
-    let idEliminar = parseInt(evt.dragged.id.split("-")[1]);
+    let idEliminar = parseInt(evt.clone.id.split("-")[1]);
     let indiceEliminar;
     let listaOrigen;
     let listaDestino;
@@ -45,30 +52,36 @@ function onMove (evt){
     }
 
     listaDestino.push(listaOrigen[indiceEliminar]);
-    listaOrigen.splice(indiceEliminar);
+    listaOrigen.splice(indiceEliminar,1);
 
-    console.log(notasToDo);
-    console.log(notasInProgress);
-    console.log(notasComplete);
+    notasToDo.forEach(e=>e.estado='1');
+    notasInProgress.forEach(e=>e.estado='2');
+    notasComplete.forEach(e=>e.estado='3');
+    guardar_localStorage();
+
+
+    // console.log(notasToDo);
+    // console.log(notasInProgress);
+    // console.log(notasComplete);
   }
 
 new Sortable(lista1, {
   group: "notas", // set both lists to same group
   animation: 150,
-onMove: (evt) =>onMove(evt) 
+  onEnd: (evt) =>onMove(evt),
 });
 
 new Sortable(lista2, {
   group: "notas",
   animation: 150,
-  onMove: (evt) =>onMove(evt) 
+  onEnd: (evt) =>onMove(evt),
 });
 
 
 new Sortable(lista3, {
   group: "notas",
   animation: 150,
-  onMove: (evt) =>onMove(evt) 
+  onEnd: (evt) =>onMove(evt) ,
 });
 // Fin grupos de las notas
 
@@ -114,27 +127,87 @@ const cargarNotas = (estado) => {
 };
 
 const agregarNota = () => {
-  console.log(document.getElementById("titulo-de-la-nota"));
   let titulo = document.getElementById("titulo-de-la-nota").value;
-  console.log(document.getElementById("titulo-de-la-nota").value);
   let contenido = document.getElementById("contenido-de-la-nota").value;
   let estado = estadoSeleccionado;
 
+  let nota;
+
   if (estado == "1") {
-    notasToDo.push(new Nota(titulo, contenido, estado));
+    notasToDo.push(nota = new Nota(titulo, contenido, estado));
     cargarNotas(estado);
   } else if (estado == "2") {
-    notasInProgress.push(new Nota(titulo, contenido, estado));
+    notasInProgress.push(nota = new Nota(titulo, contenido, estado));
     cargarNotas(estado);
   } else if (estado == "3") {
-    notasComplete.push(new Nota(titulo, contenido, estado));
+    notasComplete.push(nota = new Nota(titulo, contenido, estado));
     cargarNotas(estado);
   }
-
-  console.log(notasToDo);
-  console.log(notasInProgress);
-  console.log(notasComplete);
+  guardar_localStorage();
+  limpiarInput();
 };
 const tipoDeEstado = (elemento) => {
   estadoSeleccionado = elemento.value;
 };
+
+
+//Local Storage
+notasToDo=JSON.parse(localStorage.getItem("notasToDo"));
+console.log(notasToDo);
+console.log('nota');
+notasInProgress=JSON.parse(localStorage.getItem("notasInProgress"));
+console.log(notasInProgress);
+console.log('nota 2');
+notasComplete=JSON.parse(localStorage.getItem("notasComplete"));
+console.log(notasComplete);
+console.log('nota 3');
+
+if(!notasToDo){
+  notasToDo=[];
+} else {
+  let listT = [];
+  notasToDo.forEach((e) => {
+    const n = new Nota(e._titulo,e._contenido,e._estado);
+    console.log(n);
+    listT.push(n);
+  })
+  notasToDo = listT;
+}
+
+if(!notasInProgress){
+  notasInProgress=[];
+}else{
+  let lisM=[]
+  notasInProgress.forEach((e)=>{
+  const m = new Nota(e._titulo, e._contenido, e._estado);
+  lisM.push(m);
+  })
+  notasInProgress=lisM;
+}
+
+if(!notasComplete){
+  notasComplete=[];
+}else{
+  let lisL=[]
+  notasComplete.forEach((e)=>{
+    const l = new Nota(e._titulo, e._contenido, e._estado);
+    lisL.push(l);
+  })
+  notasComplete=lisL;
+}
+
+cargarNotas("1");
+cargarNotas("2");
+cargarNotas("3");
+
+
+
+
+////////////////////////////////////////////////////////////////
+
+//Limpiar inputs
+function limpiarInput(){
+  document.getElementById('contenido-de-la-nota').value='';
+  document.getElementById('titulo-de-la-nota').value='';
+}
+

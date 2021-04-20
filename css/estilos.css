@@ -164,6 +164,10 @@ li{
     font-weight: bold !important;
     padding:0 !important;
 }
+
+.btn-success:focus{
+    box-shadow:none !important;
+}
 .estado span{
     background-color: #EFF4F7;
     border-radius:.3em;
@@ -215,3 +219,39 @@ li{
     overflow-wrap: anywhere !important;
 
 }
+
+#titulo-de-la-nota, #contenido-de-la-nota, #titulo-de-la-nota:focus, #contenido-de-la-nota:focus{
+    border: none;
+    outline: none;
+    background-color: #F4F8F8;
+    color: #379B8A;
+}
+#contenido-de-la-nota{
+    color: black !important;
+    font-weight: 650 !important;
+}
+
+#titulo-de-la-nota, #contenido-de-la-nota {
+    width: 100% !important;
+    font-weight: 900;
+}
+
+.modal-title{
+    width: 100% !important;
+}
+
+.modal-header, .modal-body,.modal-footer{
+    background-color: #F4F8F8 !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #379B8A !important;
+    border-color: #379B8A !important;
+}
+.btn-primary:focus {
+    box-shadow: none !important;
+}
+
+
+

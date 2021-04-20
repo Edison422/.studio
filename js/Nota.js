@@ -5,7 +5,7 @@ class Nota{
     static contadorNota=0;
     constructor(titulo,contenido,estado){
         this._id=++Nota.contadorNota;
-        this._estado=estado
+        this._estado=estado;
         this._titulo=titulo;
         this._contenido=contenido;
         this._fecha= `${new Date().getHours()}:${new Date().getMinutes()} ${(dias[new Date().getDay()])} ${(new Date().getMonth())} ${(new Date().getFullYear())}`;
@@ -22,6 +22,9 @@ class Nota{
     }
     get id(){
         return this._id;
+    }
+    set estado(estado){
+        this._estado=estado;
     }
 }
 
