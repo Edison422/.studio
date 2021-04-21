@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class='scroll-en-y'>
     <div class="container-fluid">
       <div class="row content">
         <div class="col-2 contenedor-sidebar">
@@ -99,7 +99,7 @@
                   </div>
                 </div>
               </div>
-              <div class="d-inline">
+              <div class="d-inline usuario">
                 <a href="#" class="pregunta icono">
                   <ion-icon name="help-circle-outline"></ion-icon>
                 </a>
@@ -120,7 +120,7 @@
               </div>
             </div>
             <div class="contenedor-tareas">
-              <div class="row">
+              <div class="row contenedor-responsive">
                 <div class="col-4">
                   <div class="contenedor-notas">
                     <div class="estado">
@@ -140,9 +140,7 @@
                         +
                       </button>
                     </div>
-                    <div class="cuadro-notas" id="1">
-                      
-                    </div>
+                    <div class="cuadro-notas" id="1"></div>
                   </div>
                 </div>
                 <div class="col-4">
@@ -185,9 +183,7 @@
                         +
                       </button>
                     </div>
-                    <div class="cuadro-notas" id="3">
-   
-                    </div>
+                    <div class="cuadro-notas" id="3"></div>
                   </div>
                 </div>
               </div>
@@ -195,7 +191,48 @@
           </section>
         </div>
       </div>
+      <div class="screen800">
+        <div class="sidebar800">
+          
+            <button type="button" class="btn">
+              <div class="logos-sidebar">
+                <ion-icon
+                  class="icono-barra"
+                  name="home-outline"
+                ></ion-icon>
+              </div>
+            </button>
+            <button type="button" class="btn">
+              <div class="logos-sidebar">
+                <ion-icon
+                  class="icono-barra"
+                  name="stats-chart-outline"
+                ></ion-icon>
+              </div>
+            </button>
+        
+          
+            <button type="button" class="btn">
+              <div class="logos-sidebar">
+                <ion-icon
+                  class="icono-barra"
+                  name="settings-outline"
+                ></ion-icon>
+              </div>
+            </button>
+            <button type="button" class="btn">
+              <div class="logos-sidebar">
+                <ion-icon
+                  class="icono-barra"
+                  name="log-out-outline"
+                ></ion-icon>
+              </div>
+            </button>
+        
+        </div>
+      </div>
     </div>
+
     <!-- Modal -->
     <div
       class="modal fade"
@@ -208,11 +245,19 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
-              <input type="text" id="titulo-de-la-nota" placeholder='Titulo...'/>
+              <input
+                type="text"
+                id="titulo-de-la-nota"
+                placeholder="Titulo..."
+              />
             </h5>
           </div>
           <div class="modal-body">
-            <input type="text" id='contenido-de-la-nota' placeholder='Contenido...'/>
+            <input
+              type="text"
+              id="contenido-de-la-nota"
+              placeholder="Contenido..."
+            />
           </div>
           <div class="modal-footer">
             <button
@@ -223,13 +268,20 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="agregarNota()">Save changes</button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              onclick="agregarNota()"
+            >
+              Save changes
+            </button>
           </div>
         </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
- 
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
